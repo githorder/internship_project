@@ -1,0 +1,17 @@
+.profile_container {
+  display: flex;
+  align-items: center;
+}
+
+.profile_img {
+  margin-right: 2rem;
+  width: 5.2rem;
+  border-radius: 2px;
+}
+
+.profile_text {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: #333;
+  font-weight: 700;
+}

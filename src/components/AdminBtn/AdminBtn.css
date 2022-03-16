@@ -1,0 +1,11 @@
+.adminBtn {
+  padding: 1.7rem 2.8rem;
+  border-radius: 2px;
+  background-color: #585cc6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  border: none;
+  cursor: pointer;
+}
