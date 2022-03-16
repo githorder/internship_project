@@ -1,0 +1,93 @@
+.bio_container {
+  padding: 8rem 0 0 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bio_img_container {
+  width: 30rem;
+  align-self: end;
+}
+
+.bio_img {
+  width: 100%;
+}
+
+.bio_content {
+  padding: 4rem;
+  background-color: #fff;
+  width: 65rem;
+  /* height: 35rem; */
+}
+
+.bio_namebirth {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bio_namebirth_name {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  color: #585cc6;
+}
+
+.bio_namebirth_birth {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.01rem;
+  color: #8a8a8a;
+}
+
+.bio_details_container {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 2rem 0;
+}
+
+.bio_details {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.01rem;
+  color: #333333;
+}
+
+.bio_details span {
+  font-weight: 700;
+}
+
+.bio_description {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.01rem;
+  color: #333333;
+}
+
+.bio_description span {
+  font-weight: 700;
+}
+
+.bio_pet {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.01rem;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.bio_pet span {
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.bio_pet_img {
+  margin-right: 1.5rem;
+}

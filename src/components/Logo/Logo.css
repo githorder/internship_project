@@ -1,6 +1,7 @@
 .logo_container {
   display: flex;
   flex-direction: column;
+  width: 8.5rem;
 }
 
 .logo_img:first-child {
@@ -8,5 +9,5 @@
 }
 
 .logo_img {
-  width: 8.5rem;
+  width: 100%;
 }

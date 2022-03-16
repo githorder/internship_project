@@ -1,11 +1,13 @@
 .profile_container {
   display: flex;
   align-items: center;
+  width: 25rem;
 }
 
 .profile_img {
   margin-right: 2rem;
-  width: 5.2rem;
+  /* width: 5.2rem; */
+  width: 25%;
   border-radius: 2px;
 }
 
