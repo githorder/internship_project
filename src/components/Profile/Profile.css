@@ -17,3 +17,11 @@
   color: #333;
   font-weight: 700;
 }
+
+.profile_date {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.01rem;
+  color: #8a8a8a;
+}
