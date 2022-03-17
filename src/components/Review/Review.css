@@ -1,5 +1,6 @@
 .review_container {
-  width: 51.2rem;
+  /* width: 51.2rem; */
+  width: 48%;
   background-color: #f5f5f5;
   padding: 2.4rem;
   border-radius: 2px;
@@ -22,7 +23,8 @@
 .review_profile_details {
   display: flex;
   align-items: center;
-  width: 26rem;
+  /* width: 26rem; */
+  width: 70%;
   justify-content: space-between;
 }
 
@@ -33,6 +35,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.review_profile_img img {
+  width: 50%;
 }
 
 .review_profile_name {
@@ -48,4 +54,11 @@
   font-size: 1.4rem;
   line-height: 2.2rem;
   color: #8a8a8a;
+}
+
+@media only screen and (max-width: 640px) {
+  .review_container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }

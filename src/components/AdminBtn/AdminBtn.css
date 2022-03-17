@@ -5,8 +5,25 @@
   color: #ffffff;
   font-weight: 600;
   font-size: 1.8rem;
-  line-height: 1.8rem;
   border: none;
   cursor: pointer;
   width: 25%;
+}
+
+.hide_bg {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .adminBtn {
+    width: 100%;
+  }
+
+  .hide_bg {
+    display: block;
+  }
+
+  .hide_sm {
+    display: none;
+  }
 }

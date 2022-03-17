@@ -1,13 +1,14 @@
 .profile_container {
   display: flex;
   align-items: center;
-  width: 25rem;
+  /* width: 25rem; */
+  width: 25%;
 }
 
 .profile_img {
   margin-right: 2rem;
   /* width: 5.2rem; */
-  width: 25%;
+  width: 15%;
   border-radius: 2px;
 }
 
@@ -24,4 +25,18 @@
   line-height: 2.4rem;
   letter-spacing: 0.01rem;
   color: #8a8a8a;
+}
+
+@media only screen and (max-width: 640px) {
+  .profile_container {
+    width: 30%;
+  }
+
+  .profile_img {
+    width: 30%;
+  }
+
+  .hide {
+    display: none;
+  }
 }

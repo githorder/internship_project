@@ -40,7 +40,8 @@ function ReviewsBlock() {
         <div className="reviews_header">
           <h2>Отзывы</h2>
           <button>
-            <img src={plus} alt="plus" /> Добавить отзыв
+            <img src={plus} alt="plus" />
+            <span className="hide_sm">Добавить отзыв</span>
           </button>
         </div>
         <div className="reviews_container">{reviewsComp}</div>

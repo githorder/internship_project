@@ -1,12 +1,17 @@
 .title {
   font-weight: 500;
-  font-size: 12.4rem;
-  line-height: 14.8rem;
 
   letter-spacing: -0.0124rem;
   color: #ffffff;
   /* width: 115.7rem; */
-  width: 91.5%;
+  /* width: 91.5%; */
   margin: 0;
   padding: 8rem 0 0 8rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .title {
+    font-size: 7.4rem;
+    line-height: 9.8rem;
+  }
 }

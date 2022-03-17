@@ -3,4 +3,6 @@
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
+  width: 100%;
+  position: relative;
 }
