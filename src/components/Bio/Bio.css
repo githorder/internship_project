@@ -22,6 +22,7 @@
 
 .bio_namebirth {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -89,6 +90,7 @@
 
 .bio_pet_img {
   margin-right: 1.5rem;
+  width: 10%;
 }
 
 @media only screen and (max-width: 920px) {
@@ -108,6 +110,14 @@
 
   .bio_content {
     width: 65vw;
+  }
+
+  .bio_description,
+  .bio_pet,
+  .bio_details,
+  .bio_namebirth_birth {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
   }
 
   .bio_details_container {

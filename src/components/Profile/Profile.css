@@ -24,6 +24,10 @@
   .profile_img {
     width: 8vw;
   }
+
+  .profile_text {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
