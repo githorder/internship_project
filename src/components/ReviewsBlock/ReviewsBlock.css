@@ -1,26 +1,24 @@
 .reviews_section {
   display: flex;
-  justify-content: space-between;
   padding-right: 2rem;
-  width: 100%;
 }
 
 .reviews_block {
   margin: 8rem 0 0 0;
   padding: 4rem 6rem;
   background-color: #fff;
-  /* width: 118rem; */
-  width: 80%;
+  width: 120rem;
 }
 
 .reviews_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .reviews_header h2 {
-  margin: 0 0 3.6rem 0;
+  margin: 0;
   font-weight: 500;
   font-size: 6.8rem;
   line-height: 8.8rem;
@@ -31,7 +29,6 @@
 .reviews_header button {
   font-weight: 600;
   font-size: 1.8rem;
-  line-height: 1.8rem;
   letter-spacing: 0.01rem;
   color: #ffffff;
   padding: 1.7rem 2.8rem;
@@ -39,14 +36,14 @@
   border-radius: 2px;
   border: none;
   cursor: pointer;
-  width: 25%;
+  width: 26rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .reviews_header button img {
   width: 10%;
+  margin-right: 2rem;
 }
 
 .reviews_container {
@@ -62,7 +59,7 @@
 
 .page_container span {
   margin: 0 0.6rem;
-  width: 3%;
+  width: 3rem;
   opacity: 0.3;
   border: 4px solid #585cc6;
   display: inline-block;
@@ -70,15 +67,14 @@
 
 .page_container span.active {
   opacity: 1;
-  width: 4%;
+  width: 4rem;
   border: 4px solid #585cc6;
 }
 
 .scroll_container {
   align-self: flex-end;
   display: flex;
-  /* width: 12rem; */
-  width: 20%;
+  width: 20rem;
   justify-content: center;
 }
 
@@ -86,7 +82,6 @@
 .arrow_right_btn {
   margin-left: 2rem;
   width: 4.6rem;
-  /* width: 20%; */
   height: 4.6rem;
   cursor: pointer;
   border-radius: 2px;
@@ -123,10 +118,6 @@
     display: none;
   }
 
-  .reviews_header {
-    margin-bottom: 5rem;
-  }
-
   .reviews_header button {
     padding: 1rem;
     width: 5rem;
@@ -137,9 +128,20 @@
 
   .reviews_header button img {
     width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 930px) {
+  .reviews_block {
+    width: 75rem;
   }
 
-  .reviews_header h2 {
-    margin: 0;
+  .scroll_container {
+    display: none;
+  }
+
+  .reviews_container {
+    flex-direction: column;
   }
 }

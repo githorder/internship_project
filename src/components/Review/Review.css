@@ -1,5 +1,4 @@
 .review_container {
-  /* width: 51.2rem; */
   width: 48%;
   background-color: #f5f5f5;
   padding: 2.4rem;
@@ -16,22 +15,21 @@
 
 .review_profile {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .review_profile_details {
   display: flex;
   align-items: center;
-  /* width: 26rem; */
-  width: 70%;
-  justify-content: space-between;
+  width: 28rem;
 }
 
 .review_profile_img {
   background-color: #fff;
   width: 5.2rem;
   height: 5.2rem;
+  margin-right: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +55,13 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .review_container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 930px) {
   .review_container {
     width: 100%;
     margin-bottom: 3rem;

@@ -1,11 +1,11 @@
 .logo_container {
   display: flex;
   flex-direction: column;
-  /* width: 8.5rem; */
-  /* width: 25%; */
-  display: flex;
   align-items: center;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo_img:first-child {
@@ -13,14 +13,23 @@
 }
 
 .logo_img {
-  width: 60%;
+  width: 5vw;
 }
 
 @media only screen and (max-width: 640px) {
-  .logo_container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .logo_img {
+    width: 15vw;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .logo_img {
+    width: 10vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .logo_img {
+    width: 7vw;
   }
 }

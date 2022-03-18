@@ -7,7 +7,7 @@
   font-size: 1.8rem;
   border: none;
   cursor: pointer;
-  width: 25%;
+  width: 24vw;
 }
 
 .hide_bg {
@@ -16,7 +16,15 @@
 
 @media only screen and (max-width: 640px) {
   .adminBtn {
-    width: 100%;
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .adminBtn img {
+    width: 4vw;
   }
 
   .hide_bg {
@@ -25,5 +33,25 @@
 
   .hide_sm {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .adminBtn {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.7rem 1rem;
+  }
+
+  .hide_bg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .adminBtn {
+    width: 26vw;
   }
 }

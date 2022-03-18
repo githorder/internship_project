@@ -1,14 +1,11 @@
 .profile_container {
   display: flex;
   align-items: center;
-  /* width: 25rem; */
-  width: 25%;
 }
 
 .profile_img {
   margin-right: 2rem;
-  /* width: 5.2rem; */
-  width: 15%;
+  width: 3vw;
   border-radius: 2px;
 }
 
@@ -19,24 +16,24 @@
   font-weight: 700;
 }
 
-.profile_date {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  letter-spacing: 0.01rem;
-  color: #8a8a8a;
-}
-
 @media only screen and (max-width: 640px) {
-  .profile_container {
-    width: 30%;
+  .hide {
+    display: none;
   }
 
   .profile_img {
-    width: 30%;
+    width: 8vw;
   }
+}
 
-  .hide {
-    display: none;
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .profile_img {
+    width: 6vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .profile_img {
+    width: 6vw;
   }
 }
