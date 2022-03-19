@@ -102,8 +102,13 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .reviews_section {
+    width: 95vw;
+  }
+
   .reviews_block {
-    width: 60rem;
+    /* width: 60rem; */
+    width: 100%;
   }
 
   .scroll_container {
@@ -143,5 +148,11 @@
 
   .reviews_container {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1715px) {
+  .reviews_block {
+    width: 85rem;
   }
 }
