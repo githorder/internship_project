@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/internship_project/static/css/main.8f1e63f0.css",
+    "main.css": "/internship_project/static/css/main.3d1d4386.css",
     "main.js": "/internship_project/static/js/main.4a7964d0.js",
     "static/js/787.e752235b.chunk.js": "/internship_project/static/js/787.e752235b.chunk.js",
     "static/media/portrait.jpg": "/internship_project/static/media/portrait.0977d0527de9829f35c4.jpg",
@@ -17,12 +17,12 @@
     "static/media/right.svg": "/internship_project/static/media/right.026bc8cb56a31fd3257c75a518dd51bc.svg",
     "static/media/left.svg": "/internship_project/static/media/left.36ddafee9cd86e1535db122c42863675.svg",
     "static/media/add-line.svg": "/internship_project/static/media/add-line.9b1b6514ceb626b913d7db92bc1b479c.svg",
-    "main.8f1e63f0.css.map": "/internship_project/static/css/main.8f1e63f0.css.map",
+    "main.3d1d4386.css.map": "/internship_project/static/css/main.3d1d4386.css.map",
     "main.4a7964d0.js.map": "/internship_project/static/js/main.4a7964d0.js.map",
     "787.e752235b.chunk.js.map": "/internship_project/static/js/787.e752235b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f1e63f0.css",
+    "static/css/main.3d1d4386.css",
     "static/js/main.4a7964d0.js"
   ]
 }
