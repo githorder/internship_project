@@ -1,10 +1,9 @@
 .review_container {
-  width: 45%;
+  width: 100%;
   margin-right: 3rem;
   background-color: #f5f5f5;
   padding: 2.4rem;
   border-radius: 2px;
-  animation: carouselX 8s ease-in-out infinite;
 }
 
 .review_description {
@@ -13,6 +12,7 @@
   line-height: 2.2rem;
   color: #333333;
   margin: 2.4rem 0;
+  white-space: normal;
 }
 
 .review_profile {
@@ -61,7 +61,7 @@
     width: 100%;
     margin-bottom: 4rem;
     padding: 4.4rem;
-    animation: carouselY 8s ease-in-out infinite;
+    margin-right: 0;
   }
 
   .review_profile {
@@ -81,8 +81,6 @@
   .review_description {
     font-size: 2.5rem;
     line-height: 3.5rem;
-    height: 15rem;
-    overflow: scroll;
   }
 
   .review_profile_date {
@@ -95,55 +93,6 @@
   .review_container {
     width: 100%;
     margin-bottom: 4em;
-    animation: carouselY 8s ease-in-out infinite;
-  }
-
-  .review_description {
-    height: 15rem;
-    overflow: scroll;
-  }
-}
-
-@keyframes carouselX {
-  0%,
-  20% {
-    transform: translateX(0);
-  }
-  25%,
-  45% {
-    transform: translateX(calc(-100% - 3rem));
-  }
-  50%,
-  70% {
-    transform: translateX(calc(-200% - 3rem));
-  }
-  75%,
-  95% {
-    transform: translateX(calc(-300% - 3rem)));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes carouselY {
-  0%,
-  20% {
-    transform: translateY(0);
-  }
-  25%,
-  45% {
-    transform: translateY(calc(-100% - 4rem));
-  }
-  50%,
-  70% {
-    transform: translateY(calc(-200% - 4rem));
-  }
-  75%,
-  95% {
-    transform: translateY(calc(-300% - 4rem)));
-  }
-  100% {
-    transform: translateY(0);
+    margin-right: 0;
   }
 }

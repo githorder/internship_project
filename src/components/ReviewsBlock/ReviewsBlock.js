@@ -2,9 +2,9 @@ import React from 'react';
 
 import './ReviewsBlock.css';
 import plus from './add-line.svg';
-import left from './left.svg';
-import right from './right.svg';
+
 import Review from '../Review/Review';
+import Carousel, { CarouselItem } from '../Carousel/Carousel';
 
 const reviewsList = [
   {
@@ -37,12 +37,14 @@ const reviewsList = [
 function ReviewsBlock() {
   const reviewsComp = new Array(4).fill(0).map((rev, index) => {
     return (
-      <Review
-        key={index + rev}
-        name={reviewsList[index].name}
-        date={reviewsList[index].date}
-        description={reviewsList[index].description}
-      />
+      <CarouselItem key={index + rev}>
+        <Review
+          key={index + rev}
+          name={reviewsList[index].name}
+          date={reviewsList[index].date}
+          description={reviewsList[index].description}
+        />
+      </CarouselItem>
     );
   });
 
@@ -56,21 +58,9 @@ function ReviewsBlock() {
             <span className="hide_sm">Добавить отзыв</span>
           </button>
         </div>
-        <div className="reviews_container">{reviewsComp}</div>
-        <div className="page_container">
-          <span className="active"></span>
-          <span></span>
-          <span></span>
+        <div className="reviews_container">
+          <Carousel>{reviewsComp}</Carousel>
         </div>
-      </div>
-
-      <div className="scroll_container">
-        <button className="arrow_left_btn">
-          <img src={left} alt="left" />
-        </button>
-        <button className="arrow_right_btn">
-          <img src={right} alt="right" />
-        </button>
       </div>
     </div>
   );

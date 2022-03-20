@@ -1,0 +1,60 @@
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel_item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.page_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+
+.page_container span {
+  margin: 0 0.6rem;
+  width: 3rem;
+  opacity: 0.3;
+  border: 4px solid #585cc6;
+  display: inline-block;
+}
+
+.page_container span.active {
+  opacity: 1;
+  width: 4rem;
+  border: 4px solid #585cc6;
+}
+
+.arrow_left_btn,
+.arrow_right_btn {
+  margin-left: 2rem;
+  width: 4.6rem;
+  height: 4.6rem;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+}
+
+.scroll_container {
+  position: absolute;
+  bottom: 0;
+  right: -210px;
+}
+
+.arrow_leff_btn img,
+.arrow_right_btn img {
+  width: 60%;
+}
