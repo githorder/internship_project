@@ -14,32 +14,33 @@ function Bio() {
       <div className="bio_content">
         <div className="bio_content_wrapper">
           <div className="bio_namebirth">
-            <span className="bio_namebirth_name">Диёр Байназаров</span>
+            <span className="bio_namebirth_name">Diyor Baynazarov</span>
             <span className="bio_namebirth_birth">29.09.2000</span>
           </div>
 
           <ul className="bio_details_container">
             <li className="bio_details">
-              <span>Город:</span> Ташкент
+              <span>City:</span> Tashkent
             </li>
             <li className="bio_details">
-              <span>Пол:</span> Мужчина
+              <span>Gender:</span> Make
             </li>
             <li className="bio_details">
-              <span>Возраст:</span> 21
+              <span>Age:</span> 21
             </li>
           </ul>
 
           <p className="bio_description">
-            <span>О себе:</span> Всем привет! Меня зовут Яна, мне 22 года, я
-            студент. Учусь на программиста, но хочу стать продуктовым
-            аналитиком. Недавно, например, я начала проходить курс на известной
-            платформе, который поможет мне устроиться на работу моей мечты!
+            Hello there! My name is Diyor and I am 22 year old student living in
+            Tashkent. I study at INHA University in Tashkent (IUT) and willing
+            to become a professional fullstack developer in about 2 years. Very
+            curious about physics and math, fictional liturature and physical
+            training.
           </p>
           <div className="bio_pet">
             <img className="bio_pet_img" src={petPucture} alt="pet" />
             <p>
-              <span>Домашнее животное:</span>есть
+              <span>Domestic pet:</span>Nope
             </p>
           </div>
         </div>

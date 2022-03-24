@@ -34,8 +34,8 @@ const reviewsList = [
   },
 ];
 
-function ReviewsBlock() {
-  const reviewsComp = new Array(4).fill(0).map((rev, index) => {
+function ReviewsBlock({ showForm }) {
+  const reviewsComponents = new Array(4).fill(0).map((rev, index) => {
     return (
       <CarouselItem key={index + rev}>
         <Review
@@ -53,13 +53,13 @@ function ReviewsBlock() {
       <div className="reviews_block">
         <div className="reviews_header">
           <h2>Отзывы</h2>
-          <button>
+          <button onClick={showForm}>
             <img src={plus} alt="plus" />
             <span className="hide_sm">Добавить отзыв</span>
           </button>
         </div>
         <div className="reviews_container">
-          <Carousel>{reviewsComp}</Carousel>
+          <Carousel>{reviewsComponents}</Carousel>
         </div>
       </div>
     </div>

@@ -5,12 +5,12 @@ import Title from '../../Title/Title';
 import Bio from '../../Bio/Bio';
 import ReviewsBlock from '../../ReviewsBlock/ReviewsBlock';
 
-function Main() {
+function Main({ showForm }) {
   return (
     <div className="main">
       <Title />
       <Bio />
-      <ReviewsBlock />
+      <ReviewsBlock showForm={showForm} />
     </div>
   );
 }

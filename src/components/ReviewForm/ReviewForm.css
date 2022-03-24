@@ -1,0 +1,317 @@
+.show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(0.4rem);
+  background-color: rgba(0, 0, 0, 0.295);
+  z-index: 100;
+}
+
+.hide {
+  display: none;
+}
+
+.form_container {
+  padding: 2.4rem;
+  margin: 0 auto;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 67.6rem;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.form_container fieldset {
+  border: none;
+}
+
+.form_container fieldset legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.form_container fieldset legend span:first-child {
+  font-weight: 500;
+  font-size: 3.4rem;
+  letter-spacing: -0.0124rem;
+  color: #333333;
+}
+
+.form_container fieldset label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+label {
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.0124rem;
+  color: #333333;
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem 1.2rem;
+}
+
+label > input {
+  margin-top: 1.4rem;
+}
+
+.name {
+  width: 60%;
+}
+
+.close {
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  border-radius: 100px;
+  padding: 1rem;
+}
+
+.review_label {
+  position: relative;
+}
+
+.review {
+  padding-bottom: 7.5rem;
+}
+
+.limit {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8a8a8a;
+}
+
+input:focus-visible {
+  outline: 1px solid #585cc6;
+}
+
+.author_details {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.author_details div,
+input[type='submit'] {
+  background: #585cc6;
+  border-radius: 2px;
+  padding: 1.2rem 2.6rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.author_details div {
+  position: relative;
+  padding: 1.2rem 1.5rem;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.author_details div label {
+  color: #fff;
+  margin: 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 100%;
+  line-height: 3.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.author_details div {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.submit_container {
+  display: flex;
+  align-items: center;
+}
+
+input[type='submit'] {
+  width: 30%;
+  margin-right: 2rem;
+}
+
+.note {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #8a8a8a;
+  display: flex;
+  align-items: center;
+}
+
+.note img {
+  width: 5%;
+  margin-right: 0.5rem;
+}
+
+.author_details div span {
+  margin-right: 1rem;
+}
+
+.author_details div span img {
+  width: 100%;
+}
+
+.image_container {
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: #f5f5f5;
+  border-radius: 2px;
+  width: 32rem;
+  padding: 1.4rem 1.7rem;
+}
+
+.image_container img {
+  margin-right: 1rem;
+}
+
+.image_container div {
+  margin-right: 1rem;
+}
+
+.image_container span {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #333333;
+  overflow: hidden;
+  display: inline-block;
+  width: 15rem;
+  white-space: nowrap;
+}
+
+/* .image_container div {
+  display: flex;
+  flex-direction: column;
+} */
+
+.progress {
+  width: 16.8rem;
+  border: 2px solid #c2c4ff;
+  position: relative;
+}
+
+.animate {
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.image_container span.error {
+  color: red;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .form_container {
+    width: 65vw;
+  }
+
+  .author_details {
+    flex-direction: column;
+  }
+
+  .author_details input {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .author_details div {
+    width: 70%;
+  }
+
+  .author_details div label {
+    font-size: 2rem;
+  }
+
+  .submit_container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .submit_container span {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .submit_container input {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  input::placeholder {
+    font-size: 1.7rem;
+  }
+
+  .form_container {
+    width: 55rem;
+  }
+
+  label {
+    font-size: 2.6rem;
+  }
+
+  .submit_container input {
+    margin-top: 1.5rem;
+  }
+
+  span.note {
+    font-size: 1.7rem;
+  }
+
+  .author_details div {
+    font-size: 1.8rem;
+    width: 55%;
+  }
+}
