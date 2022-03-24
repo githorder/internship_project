@@ -35,7 +35,6 @@ function Toast({ isValid, isSubmiting }) {
         <img src={ecl1} alt="ecl1" className="ecl1" />
         <img src={ecl2} alt="ecl2" className="ecl2" />
         <img
-          onClick={onclose}
           className="successOr"
           src={isValid ? success : fail}
           alt="succes or fail"
