@@ -68,7 +68,6 @@ function ReviewForm({ hideForm, isShown }) {
       errorsObj.review = 'No more than 150 words';
     }
 
-    setIsValid(isOk);
     setErrors({ ...errorsObj });
 
     return isOk;
@@ -83,9 +82,16 @@ function ReviewForm({ hideForm, isShown }) {
       console.log('name', name);
       console.log('revew', review);
       console.log('image name', images[0].name);
+      setIsValid(true);
     } else {
       console.log(errors.name, errors.review);
+      setIsValid(false);
     }
+
+    setTimeout(() => {
+      hideForm();
+      setIsSubmiting(false);
+    }, 3000);
   };
 
   useEffect(() => {
@@ -104,102 +110,103 @@ function ReviewForm({ hideForm, isShown }) {
   }, [images, progress]);
 
   return (
-    <div className={isShown ? 'show' : 'hide'}>
-      <div className="form_container">
-        <form>
-          <fieldset>
-            <legend>
-              <span>Review</span>
-              <span className="close" onClick={hideForm}>
-                <img alt="close" src={close} />
-              </span>
-            </legend>
-            <label htmlFor="name">
-              What is your name
-              <div className="author_details">
-                <input
-                  onChange={onNameChange}
-                  autoComplete="off"
-                  className="name"
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="first and last name"
-                />
-                <div>
-                  <span>
-                    <img src={add} alt="upload" />
-                  </span>
-                  <label htmlFor="select_image">Upload a photo</label>
+    <>
+      <div className={isShown && !isSubmiting ? 'show' : 'hide'}>
+        <div className="form_container">
+          <form>
+            <fieldset>
+              <legend>
+                <span>Review</span>
+                <span className="close" onClick={hideForm}>
+                  <img alt="close" src={close} />
+                </span>
+              </legend>
+              <label htmlFor="name">
+                What is your name
+                <div className="author_details">
                   <input
-                    onChange={onImageChange}
-                    type="file"
-                    name="image"
-                    id="select_image"
+                    onChange={onNameChange}
+                    autoComplete="off"
+                    className="name"
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="first and last name"
                   />
+                  <div>
+                    <span>
+                      <img src={add} alt="upload" />
+                    </span>
+                    <label htmlFor="select_image">Upload a photo</label>
+                    <input
+                      onChange={onImageChange}
+                      type="file"
+                      name="image"
+                      id="select_image"
+                    />
+                  </div>
                 </div>
-              </div>
-            </label>
+              </label>
 
-            <div className={isSelected ? 'image_container' : 'hide'}>
-              <img alt="file" src={file} />
-              <div>
-                {images.map((image, index) => (
-                  <span className={isImageBig ? 'error' : ''} key={index}>
-                    {isImageBig ? 'Your image is too big' : image.name}
-                  </span>
-                ))}
-                <div className="progress">
-                  <div
-                    style={{
-                      width: `${progress}%`,
-                      position: 'absolute',
-                      top: '-2px',
-                      left: '-2px',
-                      border: '2px solid #585cc6',
-                    }}
-                    className="sub_progress"
-                  ></div>
+              <div className={isSelected ? 'image_container' : 'hide'}>
+                <img alt="file" src={file} />
+                <div>
+                  {images.map((image, index) => (
+                    <span className={isImageBig ? 'error' : ''} key={index}>
+                      {isImageBig ? 'Your image is too big' : image.name}
+                    </span>
+                  ))}
+                  <div className="progress">
+                    <div
+                      style={{
+                        width: `${progress}%`,
+                        position: 'absolute',
+                        top: '-2px',
+                        left: '-2px',
+                        border: '2px solid #585cc6',
+                      }}
+                      className="sub_progress"
+                    ></div>
+                  </div>
                 </div>
+                <img
+                  className={isLoading ? 'animate' : 'hide'}
+                  src={isImageBig ? deleteIcon : loading}
+                  alt="loading"
+                />
               </div>
-              <img
-                className={isLoading ? 'animate' : 'hide'}
-                src={isImageBig ? deleteIcon : loading}
-                alt="loading"
-              />
-            </div>
 
-            <label htmlFor="review" className="review_label">
-              What do you like the most
-              <input
-                onChange={onReviewChange}
-                type="text"
-                className="review"
-                placeholder="please, write a few words about your experience"
-                name="review"
-                id="review"
-              />
-              <span className="limit">0/150</span>
-            </label>
+              <label htmlFor="review" className="review_label">
+                What do you like the most
+                <input
+                  onChange={onReviewChange}
+                  type="text"
+                  className="review"
+                  placeholder="please, write a few words about your experience"
+                  name="review"
+                  id="review"
+                />
+                <span className="limit">0/150</span>
+              </label>
 
-            <div className="submit_container">
-              <input
-                onClick={onSubmit}
-                className="send"
-                type="submit"
-                value="Send"
-              />{' '}
-              <span className="note">
-                <img src={info} alt="info" />
-                Your reviews goes through moderation during 2 hours
-              </span>
-            </div>
-          </fieldset>
-        </form>
+              <div className="submit_container">
+                <input
+                  onClick={onSubmit}
+                  className="send"
+                  type="submit"
+                  value="Send"
+                />{' '}
+                <span className="note">
+                  <img src={info} alt="info" />
+                  Your reviews goes through moderation during 2 hours
+                </span>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
-
       <Toast isValid={isVaild} isSubmiting={isSubmiting} />
-    </div>
+    </>
   );
 }
 
