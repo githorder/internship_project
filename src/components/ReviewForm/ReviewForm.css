@@ -285,7 +285,7 @@ input[type='submit'] {
   }
 
   .submit_container input {
-    width: 60%;
+    width: 100%;
   }
 }
 

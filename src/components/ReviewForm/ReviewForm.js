@@ -26,8 +26,9 @@ function ReviewForm({ hideForm, isShown }) {
     setIsSelected(true);
     setImages([...event.target.files]);
     setProgress(0);
+    setIsImageBig(false);
     // validation check
-    if (event.target.files[0].size >= 500000) {
+    if (event.target.files[0].size >= 300000) {
       setIsImageBig(true);
       setProgress(100);
       setIsLoading(false);
@@ -52,9 +53,11 @@ function ReviewForm({ hideForm, isShown }) {
       errorsObj.name = 'Cannot be empty';
     }
 
-    if (!name.match(/^[a-zA-Z\s]+$/)) {
-      isOk = false;
-      errorsObj.name = 'Only letters';
+    if (name.length > 0) {
+      if (!name.match(/^[a-zA-Z\s]+$/)) {
+        isOk = false;
+        errorsObj.name = 'Only letters';
+      }
     }
 
     // Review
@@ -79,14 +82,19 @@ function ReviewForm({ hideForm, isShown }) {
     setIsSubmiting(true);
 
     if (handleValidation() && images.length && !isImageBig) {
-      console.log('name', name);
-      console.log('revew', review);
-      console.log('image name', images[0].name);
+      console.log('name: ', name);
+      console.log('revew: ', review);
+      console.log('image name: ', images[0].name);
       setIsValid(true);
     } else {
-      console.log(errors.name, errors.review);
+      console.error(errors.name, errors.review);
       setIsValid(false);
     }
+
+    setName('');
+    setReview('');
+    setImages([]);
+    setIsSelected(false);
 
     setTimeout(() => {
       hideForm();
@@ -125,6 +133,7 @@ function ReviewForm({ hideForm, isShown }) {
                 What is your name
                 <div className="author_details">
                   <input
+                    value={name}
                     onChange={onNameChange}
                     autoComplete="off"
                     className="name"
@@ -170,8 +179,8 @@ function ReviewForm({ hideForm, isShown }) {
                   </div>
                 </div>
                 <img
-                  className={isLoading ? 'animate' : 'hide'}
-                  src={isImageBig ? deleteIcon : loading}
+                  className={isLoading ? 'animate' : ''}
+                  src={isImageBig || !isLoading ? deleteIcon : loading}
                   alt="loading"
                 />
               </div>
@@ -179,6 +188,7 @@ function ReviewForm({ hideForm, isShown }) {
               <label htmlFor="review" className="review_label">
                 What do you like the most
                 <input
+                  value={review}
                   onChange={onReviewChange}
                   type="text"
                   className="review"
